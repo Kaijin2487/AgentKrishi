@@ -242,7 +242,3 @@ MIT License – see [LICENSE](LICENSE)
 
 🌱 *Made with care for sustainable agriculture in India*
 
-```
-
-Would you like me to also add **badges** (like build status, license, stars, etc.) at the top of the README for a more professional open-source look?
-```
