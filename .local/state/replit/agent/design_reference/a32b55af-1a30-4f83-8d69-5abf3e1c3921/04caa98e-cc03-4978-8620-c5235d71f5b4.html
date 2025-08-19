@@ -1,0 +1,457 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentKrishi - AI-Powered Agricultural Advisor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'agri-green': '#22C55E',
+                        'agri-dark-green': '#059669',
+                        'agri-amber': '#F59E0B',
+                        'agri-earth': '#92400E'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Header Bar -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-agri-green rounded-lg flex items-center justify-center">
+                        <i class="fas fa-seedling text-white text-xl"></i>
+                    </div>
+                    <span class="font-bold text-xl text-gray-900">AgentKrishi</span>
+                </div>
+
+                <!-- Navigation -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-agri-green focus:border-transparent">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                            <option value="bn">বাংলা</option>
+                            <option value="te">తెలుగు</option>
+                            <option value="mr">मराठी</option>
+                            <option value="ta">தமிழ்</option>
+                            <option value="gu">ગુજરાતી</option>
+                            <option value="kn">ಕನ್ನಡ</option>
+                            <option value="ml">മലയാളം</option>
+                            <option value="pa">ਪੰਜਾਬੀ</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-3 top-3 text-gray-400 text-xs pointer-events-none"></i>
+                    </div>
+
+                    <!-- About & Help -->
+                    <button class="text-gray-600 hover:text-agri-green transition-colors px-3 py-2 text-sm font-medium">
+                        About
+                    </button>
+                    <button class="text-gray-600 hover:text-agri-green transition-colors px-3 py-2 text-sm font-medium">
+                        Help
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-br from-green-600 via-green-700 to-green-800 min-h-[600px] flex items-center">
+        <!-- Background Image -->
+        <!-- A vast Indian agricultural field with wheat crops under golden sunlight -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    AgentKrishi – An AI-Powered Multilingual Agricultural Advisor for India
+                </h1>
+                <p class="text-xl md:text-2xl text-green-100 mb-8 leading-relaxed">
+                    Get real-time answers for your farming needs in your own language
+                </p>
+                
+                <button class="inline-flex items-center justify-center px-8 py-4 bg-agri-amber hover:bg-yellow-500 text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                    <i class="fas fa-comments mr-3 text-xl"></i>
+                    Start Chat
+                </button>
+                
+                <!-- Features Preview -->
+                <div class="flex flex-wrap justify-center gap-6 mt-12">
+                    <div class="flex items-center text-green-100 text-sm">
+                        <i class="fas fa-language mr-2"></i>
+                        10+ Indian Languages
+                    </div>
+                    <div class="flex items-center text-green-100 text-sm">
+                        <i class="fas fa-cloud-sun mr-2"></i>
+                        Weather Forecasts
+                    </div>
+                    <div class="flex items-center text-green-100 text-sm">
+                        <i class="fas fa-bug mr-2"></i>
+                        Pest Detection
+                    </div>
+                    <div class="flex items-center text-green-100 text-sm">
+                        <i class="fas fa-wifi-slash mr-2"></i>
+                        Offline Mode
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[700px]">
+            
+            <!-- Left Sidebar - Tools & Shortcuts -->
+            <div class="lg:col-span-1 bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+                <h3 class="font-semibold text-gray-900 mb-4 flex items-center">
+                    <i class="fas fa-tools mr-2 text-agri-green"></i>
+                    Quick Tools
+                </h3>
+                
+                <div class="space-y-3">
+                    <button class="w-full flex items-center p-3 text-left bg-agri-green/10 hover:bg-agri-green/20 rounded-lg transition-colors group">
+                        <i class="fas fa-seedling text-agri-green mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-gray-700 font-medium">Crop Advice</span>
+                    </button>
+                    
+                    <button class="w-full flex items-center p-3 text-left hover:bg-gray-50 rounded-lg transition-colors group">
+                        <i class="fas fa-cloud-sun text-blue-500 mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-gray-700 font-medium">Weather Forecast</span>
+                    </button>
+                    
+                    <button class="w-full flex items-center p-3 text-left hover:bg-gray-50 rounded-lg transition-colors group">
+                        <i class="fas fa-bug text-red-500 mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-gray-700 font-medium">Pest Detection</span>
+                    </button>
+                    
+                    <button class="w-full flex items-center p-3 text-left hover:bg-gray-50 rounded-lg transition-colors group">
+                        <i class="fas fa-university text-purple-500 mr-3 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-gray-700 font-medium">Govt Schemes</span>
+                    </button>
+                </div>
+
+                <!-- Offline Status -->
+                <div class="mt-6 p-3 bg-green-50 border border-green-200 rounded-lg">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                        <span class="text-sm text-green-700 font-medium">Offline Mode Ready</span>
+                    </div>
+                </div>
+
+                <!-- Quick Suggestions -->
+                <div class="mt-6">
+                    <h4 class="text-sm font-medium text-gray-600 mb-3">Quick Questions</h4>
+                    <div class="space-y-2">
+                        <button class="w-full text-left text-xs bg-gray-50 hover:bg-gray-100 p-2 rounded text-gray-600 transition-colors">
+                            Best fertilizer for wheat?
+                        </button>
+                        <button class="w-full text-left text-xs bg-gray-50 hover:bg-gray-100 p-2 rounded text-gray-600 transition-colors">
+                            How to control rice pests?
+                        </button>
+                        <button class="w-full text-left text-xs bg-gray-50 hover:bg-gray-100 p-2 rounded text-gray-600 transition-colors">
+                            Today's rainfall prediction?
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Chat Window -->
+            <div class="lg:col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col">
+                <!-- Chat Header -->
+                <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-agri-green rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">AgentKrishi Assistant</h3>
+                            <p class="text-sm text-green-600">Online • Ready to help</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-50">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                    <!-- Welcome Message -->
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-agri-green rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-gray-100 rounded-2xl rounded-tl-md p-4 max-w-lg">
+                                <p class="text-gray-800">
+                                    🙏 Welcome to AgentKrishi! I'm here to help you with all your agricultural needs. 
+                                    You can ask me about crops, weather, pests, fertilizers, or government schemes. 
+                                    How can I assist you today?
+                                </p>
+                            </div>
+                            <div class="flex items-center mt-2 space-x-4">
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-language mr-1"></i>
+                                    Translate
+                                </button>
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-volume-up mr-1"></i>
+                                    Read Aloud
+                                </button>
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-save mr-1"></i>
+                                    Save Offline
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample User Message -->
+                    <div class="flex items-start space-x-3 justify-end">
+                        <div class="flex-1 flex flex-col items-end">
+                            <div class="bg-agri-green rounded-2xl rounded-tr-md p-4 max-w-lg text-white">
+                                <p>What's the best time to plant wheat in Punjab?</p>
+                            </div>
+                            <span class="text-xs text-gray-400 mt-1">Just now</span>
+                        </div>
+                        <div class="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-gray-600 text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Sample AI Response -->
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-agri-green rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-gray-100 rounded-2xl rounded-tl-md p-4 max-w-lg">
+                                <p class="text-gray-800 mb-3">
+                                    🌾 For wheat cultivation in Punjab, the best planting time is:
+                                </p>
+                                <ul class="text-gray-700 text-sm space-y-1 mb-3">
+                                    <li>• <strong>Optimal period:</strong> November 1-20</li>
+                                    <li>• <strong>Late sowing:</strong> Up to December 15</li>
+                                    <li>• <strong>Soil temperature:</strong> 18-22°C</li>
+                                    <li>• <strong>Variety:</strong> PBW 725, HD 3086 recommended</li>
+                                </ul>
+                                <!-- Mock weather integration -->
+                                <!-- A clear Punjab agricultural landscape showing wheat fields ready for sowing -->
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=200" alt="Punjab wheat field ready for sowing" class="rounded-lg w-full h-32 object-cover mb-2" />
+                                <p class="text-sm text-agri-green">📅 Current conditions are favorable for sowing!</p>
+                            </div>
+                            <div class="flex items-center mt-2 space-x-4">
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-language mr-1"></i>
+                                    Translate
+                                </button>
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-volume-up mr-1"></i>
+                                    Read Aloud
+                                </button>
+                                <button class="text-xs text-gray-500 hover:text-agri-green flex items-center">
+                                    <i class="fas fa-save mr-1"></i>
+                                    Save Offline
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="p-4 border-t border-gray-200">
+                    <!-- Quick Suggestions Carousel -->
+                    <div class="mb-4">
+                        <div class="flex gap-2 overflow-x-auto pb-2">
+                            <button class="flex-shrink-0 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full text-sm text-gray-700 transition-colors">
+                                <i class="fas fa-seedling mr-1 text-agri-green"></i>
+                                Best fertilizer for wheat
+                            </button>
+                            <button class="flex-shrink-0 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full text-sm text-gray-700 transition-colors">
+                                <i class="fas fa-bug mr-1 text-red-500"></i>
+                                How to control rice pests
+                            </button>
+                            <button class="flex-shrink-0 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-full text-sm text-gray-700 transition-colors">
+                                <i class="fas fa-cloud-rain mr-1 text-blue-500"></i>
+                                Today's rainfall prediction
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input Controls -->
+                    <div class="flex items-end space-x-3">
+                        <!-- File Upload -->
+                        <button class="p-3 text-gray-400 hover:text-agri-green hover:bg-gray-50 rounded-lg transition-colors" data-mock="true" data-implementation="Implement file upload for pest/disease images">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+
+                        <!-- Text Input -->
+                        <div class="flex-1 relative">
+                            <textarea 
+                                placeholder="Type your farming question here..." 
+                                class="w-full resize-none border border-gray-300 rounded-lg px-4 py-3 pr-12 focus:outline-none focus:ring-2 focus:ring-agri-green focus:border-transparent max-h-32" 
+                                rows="1"
+                                data-mock="true"
+                                data-bind="userMessage"
+                            ></textarea>
+                            <!-- Voice Input -->
+                            <button class="absolute right-3 top-3 p-1 text-gray-400 hover:text-agri-green transition-colors" data-mock="true" data-implementation="Implement speech-to-text using Whisper API">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+
+                        <!-- Send Button -->
+                        <button class="p-3 bg-agri-green hover:bg-agri-dark-green text-white rounded-lg transition-colors" data-mock="true" data-implementation="Handle message sending and AI response">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <!-- Input Helper Text -->
+                    <p class="text-xs text-gray-500 mt-2 flex items-center">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        You can type, speak, or upload images for pest detection
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact & Credits -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Credits & Acknowledgments</h4>
+                    <div class="space-y-2 text-sm">
+                        <p>• AI4Bharat for IndicTrans2</p>
+                        <p>• OpenAI for Whisper API</p>
+                        <p>• Indian Meteorological Department</p>
+                        <p>• Open-source agricultural datasets</p>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Information</h4>
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            support@agentkrishi.in
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +91-XXXX-XXXXXX
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Bangalore, India
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sponsor Logos -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hackathon Partners</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-3 flex items-center justify-center">
+                            <span class="text-gray-800 text-xs font-medium">TechCorp</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 flex items-center justify-center">
+                            <span class="text-gray-800 text-xs font-medium">AI Labs</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 flex items-center justify-center">
+                            <span class="text-gray-800 text-xs font-medium">FarmTech</span>
+                        </div>
+                        <div class="bg-white rounded-lg p-3 flex items-center justify-center">
+                            <span class="text-gray-800 text-xs font-medium">GreenAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="border-t border-gray-700 mt-8 pt-8">
+                <div class="bg-yellow-900/20 border border-yellow-700 rounded-lg p-4 mb-6">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation-triangle text-yellow-400 mt-1"></i>
+                        <div>
+                            <h5 class="text-yellow-400 font-medium mb-1">Important Disclaimer</h5>
+                            <p class="text-yellow-200 text-sm">
+                                This is advisory information only. Please verify recommendations with local agricultural experts 
+                                and extension officers before implementing any farming practices. AgentKrishi is not responsible 
+                                for any losses due to reliance on this information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                    <p>&copy; 2024 AgentKrishi. Built for Indian farmers with ❤️</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-agri-green transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-agri-green transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-agri-green transition-colors">Open Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Basic interactive enhancements (IIFE for scoping)
+        (function() {
+            // TODO: Implement language switching functionality
+            // TODO: Implement chat message handling and AI responses  
+            // TODO: Implement voice input using Whisper API
+            // TODO: Implement file upload for pest detection images
+            // TODO: Implement text-to-speech for responses
+            // TODO: Implement offline mode functionality
+            // TODO: Implement weather API integration
+            // TODO: Implement government schemes database
+
+            // Mock scroll behavior for chat
+            const chatContainer = document.querySelector('.overflow-y-auto');
+            if (chatContainer) {
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            // Mock textarea auto-resize
+            const textarea = document.querySelector('textarea');
+            if (textarea) {
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = this.scrollHeight + 'px';
+                });
+            }
+
+            // Mock quick suggestion clicks
+            const quickSuggestions = document.querySelectorAll('[class*="Quick Questions"] button, [class*="overflow-x-auto"] button');
+            quickSuggestions.forEach(button => {
+                button.addEventListener('click', function() {
+                    const textarea = document.querySelector('textarea');
+                    if (textarea) {
+                        textarea.value = this.textContent.trim();
+                        textarea.focus();
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

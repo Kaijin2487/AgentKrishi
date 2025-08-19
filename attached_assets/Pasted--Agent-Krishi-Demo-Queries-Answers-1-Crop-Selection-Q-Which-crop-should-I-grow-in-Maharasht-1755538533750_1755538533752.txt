@@ -1,0 +1,100 @@
+🌱 Agent Krishi – Demo Queries & Answers
+1. Crop Selection
+
+Q: Which crop should I grow in Maharashtra during the Kharif season?
+A: In Kharif, you can grow soybean, cotton, tur, or paddy depending on soil type. For black cotton soil, soybean and cotton give high yield.
+
+2. Fertilizer Usage
+
+Q: How much urea should I use for 1 acre of wheat?
+A: For 1 acre, apply 50 kg urea in two splits: half at sowing and half at tillering stage for better yield.
+
+3. Pest Control
+
+Q: My brinjal crop has holes in leaves. What should I do?
+A: This is likely due to fruit & shoot borer. Spray neem oil (5 ml per liter water) or Bacillus thuringiensis for eco-friendly control.
+
+4. Irrigation
+
+Q: How often should I water my tomato crop?
+A: Water every 7–10 days in cool season and every 5–6 days in summer. Use drip irrigation to save water and prevent fungal diseases.
+
+5. Soil Health
+
+Q: How can I improve soil fertility naturally?
+A: Use green manures (like sunhemp), apply compost/FYM, and rotate with legumes (pulses) to increase nitrogen naturally.
+
+6. Government Scheme
+
+Q: Are there any subsidies for drip irrigation?
+A: Yes, under the Pradhan Mantri Krishi Sinchai Yojana (PMKSY), farmers get 55–75% subsidy for drip and sprinkler systems.
+
+7. Crop Disease
+
+Q: My wheat crop is turning yellow. What is the reason?
+A: Yellowing may be due to nitrogen deficiency or yellow rust disease. Apply 20 kg urea per acre or consult a local Krishi officer if rust is seen.
+
+8. Weather Advisory
+
+Q: It is raining continuously, should I sow cotton now?
+A: Avoid sowing during heavy rain. Wait until the soil has proper moisture but not waterlogging for better germination.
+
+9. Storage
+
+Q: How to store harvested paddy safely?
+A: Dry the grains to 12% moisture, store in gunny bags, and keep in a ventilated godown with neem leaves to avoid insect attack.
+
+10. Crop Yield
+
+Q: What is the average yield of sugarcane per acre?
+A: With proper care, sugarcane gives 35–40 tons per acre in India. Improved varieties may yield up to 50 tons.
+
+11. Animal Care
+
+Q: What to feed cows in summer to increase milk?
+A: Provide green fodder (maize, jowar), clean water, and mineral mixture. Avoid excess dry fodder as it reduces milk yield.
+
+12. Seed Selection
+
+Q: Which hybrid paddy seeds are best for high yield?
+A: Varieties like MTU-1010, IR-64, and hybrid PHB-71 are popular with high yield potential. Choose based on local recommendation.
+
+13. Organic Farming
+
+Q: How can I manage pests without chemicals?
+A: Use neem oil, pheromone traps, cow urine-based sprays, and intercropping with marigold to reduce pest population naturally.
+
+14. Crop Insurance
+
+Q: How do I apply for PM Fasal Bima Yojana?
+A: You can apply through Common Service Centers (CSC), banks, or the PMFBY website. Premium is subsidized up to 98% by government.
+
+15. Market Prices
+
+Q: What is the price of onions in the nearest mandi?
+A: Please check Agmarknet portal or e-NAM for real-time mandi rates. Nearby Nashik mandi currently gives higher onion prices.
+
+16. Water-Saving Tips
+
+Q: How can I save water in paddy farming?
+A: Use System of Rice Intensification (SRI) method and alternate wetting & drying (AWD). These reduce water use by 30–40%.
+
+17. Fertilizer Subsidy
+
+Q: Are fertilizers available at subsidized rates?
+A: Yes, urea, DAP, MOP, and NPK are available at subsidized rates through government-approved dealers. Check with your local cooperative society.
+
+18. Crop Rotation
+
+Q: After harvesting wheat, which crop should I grow?
+A: Grow pulses like moong or urad after wheat. It improves soil nitrogen and reduces pest cycles.
+
+19. Weed Control
+
+Q: My groundnut crop has too many weeds. What can I do?
+A: Do manual weeding at 20 and 40 days after sowing. If needed, apply Pendimethalin herbicide as pre-emergence.
+
+20. Future Farming
+
+Q: Is mushroom cultivation profitable?
+A: Yes, mushroom farming has high demand and low land requirement. With proper training, you can earn ₹1–1.5 lakh per 100 sq.ft in one season.
